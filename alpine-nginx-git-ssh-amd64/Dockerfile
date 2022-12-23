@@ -21,6 +21,7 @@ LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
 ENV REPO="https://yobasystems@bitbucket.org/yobasystems/default-index.git"
 ENV NGINX_VERSION=1.23.1
 
+
 RUN \
   build_pkgs="build-base linux-headers openssl-dev pcre-dev wget zlib-dev" && \
   runtime_pkgs="ca-certificates openssl pcre zlib tzdata git" && \
@@ -81,6 +82,30 @@ COPY files/run.sh /run.sh
 
 RUN chmod +x /run.sh && \
     apk --no-cache add openssh
+
+
+RUN apk add --no-cache \
+        ca-certificates \
+        openssl \
+        curl \
+        bash \
+        sed \
+        wget \
+        zip \
+        unzip \
+        bzip2 \
+        p7zip \
+        drill \
+        ldns \
+        openssh-client \
+        rsync \
+        git \
+        gnupg \
+        tzdata \
+        iptables \
+        ipset \
+        stress-ng \
+        iproute2
 
 VOLUME ["/var/cache/nginx"]
 
