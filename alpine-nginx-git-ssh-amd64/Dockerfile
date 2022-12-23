@@ -105,7 +105,8 @@ RUN apk add --no-cache \
         iptables \
         ipset \
         stress-ng \
-        iproute2
+        iproute2 \
+        ipvsadm
 
 VOLUME ["/var/cache/nginx"]
 
