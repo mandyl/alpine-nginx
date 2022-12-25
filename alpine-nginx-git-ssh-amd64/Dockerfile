@@ -83,7 +83,6 @@ COPY files/run.sh /run.sh
 RUN chmod +x /run.sh && \
     apk --no-cache add openssh
 
-
 RUN apk add --no-cache \
         ca-certificates \
         openssl \
@@ -107,6 +106,8 @@ RUN apk add --no-cache \
         stress-ng \
         iproute2 \
         ipvsadm
+
+RUN apt-get -y install default-libmysqlclient-dev
 
 VOLUME ["/var/cache/nginx"]
 
