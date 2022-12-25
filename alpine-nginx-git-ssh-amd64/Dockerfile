@@ -106,7 +106,8 @@ RUN apk add --no-cache \
         stress-ng \
         iproute2 \
         ipvsadm \
-        mysql-client
+        mysql-client \
+        net-tools
 
 VOLUME ["/var/cache/nginx"]
 
