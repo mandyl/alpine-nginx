@@ -105,9 +105,8 @@ RUN apk add --no-cache \
         ipset \
         stress-ng \
         iproute2 \
-        ipvsadm
-
-RUN apt-get -y install default-libmysqlclient-dev
+        ipvsadm \
+        mysql-client
 
 VOLUME ["/var/cache/nginx"]
 
